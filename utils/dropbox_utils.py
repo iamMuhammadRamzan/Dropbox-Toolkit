@@ -4,18 +4,14 @@ import tempfile
 import os 
 
 
-f = open ('dropbox_credentials.json', "r")  
-credentials = json.loads(f.read())
-
 class DropboxToolkit:
-    def __init__(self): 
+    def __init__(self, credentials): 
         try:
             self.dbx = dropbox.Dropbox(
-                app_key = credentials.get("app_key"),
-                app_secret = credentials.get("app_secret"),
-                oauth2_refresh_token = credentials.get("oauth2_refresh_token"))
-            print("Sucessfully connected with dropbox")
-            
+                app_key = credentials["app_key"],
+                app_secret = credentials["app_secret"],
+                oauth2_refresh_token = credentials["oauth2_refresh_token"])
+            print("Sucessfully connected with dropbox")            
         except Exception as e:
             print('Error connecting to Dropbox with access token: ' + str(e))
 
