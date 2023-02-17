@@ -32,7 +32,7 @@ class DropboxToolkit:
             files_list = []
             for file in files:
                 if isinstance(file, dropbox.files.FileMetadata):
-                    files_list.append(file)
+                    files_list.append(file.name)
             return files_list
         except Exception as e:
             print('Error getting list of files from Dropbox: ' + str(e))
