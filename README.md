@@ -9,8 +9,8 @@ pip install dropbox
 from utils.dropbox_toolkit import DropboxToolkit
 
 f = open ('dropbox_credentials.json', "r")  
-    credentials = json.loads(f.read())
-    dbx = DropboxToolkit(credentials)
+credentials = json.loads(f.read())
+dbx = DropboxToolkit(credentials)
 ```
 * Note: Place your dropbox credentials in `dropbox_credentials.json` file.
 
