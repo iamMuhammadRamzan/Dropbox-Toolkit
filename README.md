@@ -15,7 +15,7 @@ credentials = json.loads(f.read())
 dbx = DropboxToolkit(credentials)
 ```
 * Note: Place your dropbox credentials in `dropbox_credentials.json` file.
-
+* If you face this error `did not match pattern '(/(.|[\r\n])*)?|id:.*|(ns:[0-9]+(/.*)?)'` just use `/` before folder name.
 ## Credentials for dropbox 
 
 #### Get Access Token
